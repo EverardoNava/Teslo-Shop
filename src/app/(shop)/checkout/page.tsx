@@ -20,7 +20,6 @@ export default function CheckoutPage() {
 
                 <Title title='Verificar orden' />
 
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
                     {/* Carrito */}
@@ -29,8 +28,6 @@ export default function CheckoutPage() {
                         <Link href="/cart" className="underline mb-5">
                             Editar carrito
                         </Link>
-
-
 
                         {/* Items */}
                         {
@@ -56,14 +53,9 @@ export default function CheckoutPage() {
                                     </div>
 
                                 </div>
-
-
                             ))
                         }
                     </div>
-
-
-
 
                     {/* Checkout - Resumen de orden */}
                     <div className="bg-white rounded-xl shadow-xl p-7">
@@ -99,7 +91,6 @@ export default function CheckoutPage() {
                             <span className="mt-5 text-2xl">Total:</span>
                             <span className="mt-5 text-2xl text-right">$ 100</span>
 
-
                         </div>
 
                         <div className="mt-5 mb-2 w-full">
@@ -110,7 +101,6 @@ export default function CheckoutPage() {
                                     Al hacer clic en &quot;Colocar orden&quot;, aceptas nuestros <a href="#" className="underline">términos y condiciones</a> y <a href="#" className="underline">política de privacidad</a>
                                 </span>
                             </p>
-
 
                             <Link
                                 className="flex btn-primary justify-center"
