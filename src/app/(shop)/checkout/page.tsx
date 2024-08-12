@@ -104,7 +104,7 @@ export default function CheckoutPage() {
 
                             <Link
                                 className="flex btn-primary justify-center"
-                                href="/orders/123">
+                                href="/checkout/address">
                                 Colocar orden
                             </Link>
                         </div>
