@@ -3,14 +3,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useCartStore } from "@/store";
-import { QuantitySelector } from "@/components";
-import Link from "next/link";
+import { currencyFormat } from '@/utils/currencyFormat';
 
 
 export const ProductsInCart = () => {
 
-    const updateProductQuantity = useCartStore(state => state.updateProductQuantity)
-    const removeProduct = useCartStore(state => state.removeProductCart)
     const [loaded, setLoaded] = useState(false);
     const productsInCart = useCartStore(state => state.cart);
 
@@ -42,22 +39,10 @@ export const ProductsInCart = () => {
                             className="mr-5 rounded-none"
                         />
                         <div>
-                            <Link
-                                className="hover:underline cursor-pointer"
-                                href={`/product/${product.slug}`}
-                            >
-                                {product.size} - {product.title}
-                            </Link>
-                            <p>${product.price}</p>
-                            <QuantitySelector
-                                quantity={product.quantity}
-                                onQuantityChanged={quantity => updateProductQuantity(product, quantity)}
-                            />
-                            <button
-                                onClick={() => removeProduct(product)}
-                                className="mt-3 py-1 px-2 border-2 font-medium bg-red-500 rounded-md text-white hover:bg-red-700">
-                                Remover
-                            </button>
+                            <span>
+                                {product.size} - {product.title} ({product.quantity})
+                            </span>
+                            <p className="font-bold">{currencyFormat(product.price * product.quantity)}</p>
                         </div>
                     </div>
                 ))
