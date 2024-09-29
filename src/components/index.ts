@@ -15,6 +15,7 @@ export * from "./product/slideshow/ProductMovileSlideshow";
 export * from "./product/quantity-selector/QuantitySelector";
 export * from "./product/size-selector/SizeSelector";
 export * from "./product/stock-label/StockLabel";
+export * from "./product/product-image/ProductImage";
 
 export * from "./ui/sidebar/Sidebar";
 export * from "./ui/pagination/Pagination";
